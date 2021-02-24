@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"github.com/EasyDarwin/easygolib/utils"
 )
 
 type Model struct {

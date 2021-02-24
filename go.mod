@@ -1,4 +1,4 @@
-module github.com/EasyDarwin
+module github.com/epcom-hdxt/easydarwin
 
 go 1.15
 

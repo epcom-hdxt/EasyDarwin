@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EasyDarwin/models"
-	"github.com/EasyDarwin/easygolib/db"
+	"github.com/epcom-hdxt/easydarwin/easygolib/db"
+	"github.com/epcom-hdxt/easydarwin/models"
 
-	"github.com/EasyDarwin/rtsp"
+	"github.com/epcom-hdxt/easydarwin/rtsp"
 	"github.com/gin-gonic/gin"
 )
 
@@ -43,7 +43,7 @@ func (h *APIHandler) StreamStart(c *gin.Context) {
 		log.Printf("Pull to push err:%v", err)
 		return
 	}
-	agent := fmt.Sprintf("EasyDarwinGo/%s", BuildVersion)
+	agent := fmt.Sprintf("epcom-hdxt/easydarwinGo/%s", BuildVersion)
 	if BuildDateTime != "" {
 		agent = fmt.Sprintf("%s(%s)", agent, BuildDateTime)
 	}

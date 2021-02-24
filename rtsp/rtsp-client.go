@@ -18,7 +18,7 @@ import (
 
 	"github.com/teris-io/shortid"
 
-	"github.com/EasyDarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
 
 	"github.com/pixelbender/go-sdp/sdp"
 )

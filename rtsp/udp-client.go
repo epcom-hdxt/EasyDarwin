@@ -5,7 +5,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/EasyDarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
 )
 
 type UDPClient struct {

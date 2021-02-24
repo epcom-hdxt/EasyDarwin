@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EasyDarwin/models"
-	"github.com/EasyDarwin/rtsp"
+	"github.com/epcom-hdxt/easydarwin/easygolib/db"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/models"
+	"github.com/epcom-hdxt/easydarwin/rtsp"
+	"github.com/epcom-hdxt/easydarwin/sessions"
 	"github.com/gin-gonic/gin"
-	"github.com/EasyDarwin/easygolib/db"
-	"github.com/EasyDarwin/easygolib/utils"
-	"github.com/EasyDarwin/sessions"
 	"github.com/shirou/gopsutil/cpu"
 	"github.com/shirou/gopsutil/mem"
 )
@@ -113,7 +113,7 @@ func (h *APIHandler) GetServerInfo(c *gin.Context) {
 		"InterfaceVersion": "V1",
 		"RunningTime":      utils.UpTimeString(),
 		"StartUpTime":      utils.DateTime(utils.StartTime),
-		"Server":           fmt.Sprintf("%s/%s,%s (Platform/%s;)", "EasyDarwin", BuildDateTime, BuildVersion, strings.Title(runtime.GOOS)),
+		"Server":           fmt.Sprintf("%s/%s,%s (Platform/%s;)", "epcom-hdxt/easydarwin", BuildDateTime, BuildVersion, strings.Title(runtime.GOOS)),
 		"memData":          memData,
 		"cpuData":          cpuData,
 		"pusherData":       pusherData,

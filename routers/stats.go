@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/EasyDarwin/rtsp"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/rtsp"
 	"github.com/gin-gonic/gin"
-	"github.com/EasyDarwin/easygolib/utils"
 )
 
 /**

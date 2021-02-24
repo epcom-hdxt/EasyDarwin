@@ -22,7 +22,7 @@ import (
 
 const version = "windows-service"
 
-//EasyDarwin add for config restart on crash
+//epcom-hdxt/easydarwin add for config restart on crash
 
 const (
 	SC_ACTION_NONE        = 0
@@ -57,7 +57,7 @@ func setServiceFailureActions(handle windows.Handle) error {
 	return windows.ChangeServiceConfig2(handle, SERVICE_CONFIG_FAILURE_ACTIONS, (*byte)(unsafe.Pointer(&m)))
 }
 
-//-- EasyDarwin add for config restart on crash
+//-- epcom-hdxt/easydarwin add for config restart on crash
 
 type windowsService struct {
 	i Interface
@@ -259,12 +259,12 @@ func (ws *windowsService) Install() error {
 		return fmt.Errorf("InstallAsEventCreate() failed: %s", err)
 	}
 
-	// EasyDarwin add for config restart on crash
+	// epcom-hdxt/easydarwin add for config restart on crash
 	err = setServiceFailureActions(s.Handle)
 	if err != nil {
 		panic(err)
 	}
-	//-- EasyDarwin add for config restart on crash
+	//-- epcom-hdxt/easydarwin add for config restart on crash
 	return nil
 }
 

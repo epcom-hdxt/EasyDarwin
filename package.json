@@ -1,23 +1,23 @@
 {
   "name": "easydarwin",
   "version": "8.1.0",
-  "description": "EasyDarwin Open Source Media Server",
+  "description": "epcom-hdxt/easydarwin Open Source Media Server",
   "main": "index.js",
   "scripts": {
-    "build:ico": "rsrc -arch amd64 -ico ed.ico -o EasyDarwin_windows.syso",
+    "build:ico": "rsrc -arch amd64 -ico ed.ico -o epcom-hdxt/easydarwin_windows.syso",
     "build:www": "cd web_src && npm run build && cd .. && apidoc -i routers -o www/apidoc",
     "build:doc": "apidoc -i routers -o www/apidoc",
-    "build:win": "go build -tags release -ldflags \"-s -w\" -o EasyDarwin.exe",
+    "build:win": "go build -tags release -ldflags \"-s -w\" -o epcom-hdxt/easydarwin.exe",
     "build:lin": "go build -tags release -ldflags \"-X 'main.buildDateTime=$(date '+%Y-%m-%d %H:%M:%S')' -X 'main.gitCommitCode=$(git rev-list --full-history --all --abbrev-commit --max-count 1)' -s -w\" -o easydarwin",
-    "build:dev": "go build -o EasyDarwin.exe",
-    "dev": "go build -o EasyDarwin.exe",
+    "build:dev": "go build -o epcom-hdxt/easydarwin.exe",
+    "dev": "go build -o epcom-hdxt/easydarwin.exe",
     "dev:lin": "go build -o easydarwin",
     "dev:www": "cd web_src && npm run start",
-    "clean": "rimraf EasyDarwin.exe EasyDarwin.exe~ easydarwin"
+    "clean": "rimraf epcom-hdxt/easydarwin.exe epcom-hdxt/easydarwin.exe~ easydarwin"
   },
   "apidoc": {
-    "name": "EasyDarwin",
-    "title": "EasyDarwin API Reference",
+    "name": "epcom-hdxt/easydarwin",
+    "title": "epcom-hdxt/easydarwin API Reference",
     "order": [
       "stats",
       "Pushers",
@@ -44,9 +44,9 @@
   "license": "ISC",
   "pack": [
     {
-      "name": "EasyDarwin-windows",
+      "name": "epcom-hdxt/easydarwin-windows",
       "format": "zip",
-      "pattern": "{www/**,EasyDarwin.exe,ServiceInstall-EasyDarwin.exe,ServiceUninstall-EasyDarwin.exe,easydarwin.ini}",
+      "pattern": "{www/**,epcom-hdxt/easydarwin.exe,ServiceInstall-epcom-hdxt/easydarwin.exe,ServiceUninstall-epcom-hdxt/easydarwin.exe,easydarwin.ini}",
       "options": {
         "dot": true,
         "ignore": [
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "EasyDarwin-linux",
+      "name": "epcom-hdxt/easydarwin-linux",
       "format": "tar",
       "pattern": "{www/**,easydarwin,easydarwin.ini,*.sh}",
       "options": {

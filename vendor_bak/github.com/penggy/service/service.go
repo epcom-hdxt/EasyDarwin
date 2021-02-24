@@ -18,7 +18,7 @@
 //	import (
 //		"log"
 //
-//		"github.com/EasyDarwin/service"
+//		"github.com/epcom-hdxt/easydarwin/service"
 //	)
 //
 //	var logger service.Logger
@@ -59,7 +59,7 @@
 //			logger.Error(err)
 //		}
 //	}
-package service // import "github.com/EasyDarwin/service"
+package service // import "github.com/epcom-hdxt/easydarwin/service"
 
 import (
 	"errors"

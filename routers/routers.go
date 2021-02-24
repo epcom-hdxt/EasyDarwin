@@ -7,14 +7,14 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/EasyDarwin/easygolib/db"
+	"github.com/epcom-hdxt/easydarwin/easygolib/db"
 
+	"github.com/epcom-hdxt/easydarwin/cors"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/sessions"
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
-	"github.com/EasyDarwin/easygolib/utils"
-	"github.com/EasyDarwin/cors"
-	"github.com/EasyDarwin/sessions"
 	validator "gopkg.in/go-playground/validator.v8"
 )
 
@@ -113,7 +113,7 @@ func Init() (err error) {
 
 	store := sessions.NewGormStoreWithOptions(db.SQLite, sessions.GormStoreOptions{
 		TableName: "t_sessions",
-	}, []byte("EasyDarwin@2018"))
+	}, []byte("epcom-hdxt/easydarwin@2018"))
 	tokenTimeout := utils.Conf().Section("http").Key("token_timeout").MustInt(7 * 86400)
 	store.Options(sessions.Options{HttpOnly: true, MaxAge: tokenTimeout, Path: "/"})
 	sessionHandle := sessions.Sessions("token", store)

@@ -128,14 +128,14 @@ module.exports = {
         new ExtractTextPlugin("css/[name].[chunkhash:8].css"),
         new HtmlWebpackPlugin({
             filename: 'login.html',
-            title: 'EasyDarwin 登录',
+            title: 'epcom-hdxt/easydarwin 登录',
             inject: true,
             chunks: ['login'],
             template: './template-login.html'
         }),        
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            title: 'EasyDarwin',
+            title: 'epcom-hdxt/easydarwin',
             inject: true, // head -> Cannot find element: #app
             chunks: ['index'],
             template: './template.html'

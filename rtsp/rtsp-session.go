@@ -17,9 +17,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EasyDarwin/models"
-	"github.com/EasyDarwin/easygolib/db"
-	"github.com/EasyDarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/easygolib/db"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/models"
 
 	"github.com/teris-io/shortid"
 )
@@ -418,7 +418,7 @@ func (session *Session) handleRequest(req *Request) {
 				res.Status = "Unauthorized"
 				nonce := fmt.Sprintf("%x", md5.Sum([]byte(shortid.MustGenerate())))
 				session.nonce = nonce
-				res.Header["WWW-Authenticate"] = fmt.Sprintf(`Digest realm="EasyDarwin", nonce="%s", algorithm="MD5"`, nonce)
+				res.Header["WWW-Authenticate"] = fmt.Sprintf(`Digest realm="epcom-hdxt/easydarwin", nonce="%s", algorithm="MD5"`, nonce)
 				return
 			}
 		}

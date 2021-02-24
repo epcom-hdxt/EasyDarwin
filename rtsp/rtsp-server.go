@@ -13,7 +13,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/EasyDarwin/easygolib/utils"
+	"github.com/epcom-hdxt/easydarwin/easygolib/utils"
 )
 
 type Server struct {
@@ -30,7 +30,7 @@ type Server struct {
 var Instance *Server = &Server{
 	SessionLogger:  SessionLogger{log.New(os.Stdout, "[RTSPServer]", log.LstdFlags|log.Lshortfile)},
 	Stoped:         true,
-	TCPPort:        utils.Conf().Section("rtsp").Key("port").MustInt(554),
+	TCPPort:        utils.Conf().Section("rtsp").Key("port").MustInt(1554),
 	pushers:        make(map[string]*Pusher),
 	addPusherCh:    make(chan *Pusher),
 	removePusherCh: make(chan *Pusher),

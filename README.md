@@ -1,17 +1,17 @@
 # easydarwin
 视频rtsp拉取分发
-# EasyDarwin开源流媒体服务器
+# epcom-hdxt/easydarwin开源流媒体服务器
 
 
 - 直接运行(Linux)
 
-		cd EasyDarwin
+		cd epcom-hdxt/easydarwin
 		./easydarwin
 		# Ctrl + C
 
 - 以服务启动(Linux)
 
-		cd EasyDarwin
+		cd epcom-hdxt/easydarwin
 		./start.sh
 		# ./stop.sh
 

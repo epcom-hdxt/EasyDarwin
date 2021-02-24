@@ -1,7 +1,7 @@
 {
   "name": "easydarwin-web-src",
   "version": "1.0.0",
-  "description": "EasyDarwin Web Page",
+  "description": "epcom-hdxt/easydarwin Web Page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "keywords": [
-    "EasyDarwin"
+    "epcom-hdxt/easydarwin"
   ],
   "author": "epcom-hdxt",
   "license": "ISC",

@@ -1,6 +1,6 @@
 {
-  "name": "EasyDarwin",
-  "title": "EasyDarwin API Reference",
+  "name": "epcom-hdxt/easydarwin",
+  "title": "epcom-hdxt/easydarwin API Reference",
   "order": [
     "stats",
     "Pushers",
@@ -19,7 +19,7 @@
     "GetServerInfo"
   ],
   "version": "8.1.0",
-  "description": "EasyDarwin Open Source Media Server",
+  "description": "epcom-hdxt/easydarwin Open Source Media Server",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
